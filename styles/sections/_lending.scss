@@ -1,0 +1,117 @@
+.landing-page {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../assets/images/backgroun.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 130px;
+
+
+    @media(max-width: 1000px) {
+        padding: 0 65px;
+    }
+
+    @media(max-width: 700px) {
+        padding: 0 20px;
+    }
+
+    header {
+        height: 120px;
+
+        @include flex(space-between);
+
+        .logo-text {
+            @include font(48px, 500, 72px, #FFFFFF);
+
+
+            @media(max-width:850px) {
+                font-size: 32px;
+            }
+        }
+
+        nav{ 
+
+            .burger-icon{
+                display: none;
+
+                @media(max-width: 630px){
+                    display: block;
+                }
+                span{
+                    display: block;
+                    background-color: #FFFFFF;
+                    width: 60px;
+                    height: 5px;
+                    margin: 8px 0;
+                }
+            }
+
+            ul {
+
+            @include flex($gap: 50px);
+
+            @media(max-width: 630px) {
+                display: none;
+            }
+
+            li {
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    @include font(24px, 500, 36px, #FFFFFF);
+
+                    @media(max-width:850px) {
+                        font-size: 18px;
+                    }
+                }
+
+                .link-button {
+                    padding: 14px 44px;
+                    background-color: #FFFFFF;
+                    color: $primary;
+                    border-radius: 10px;
+                }
+            }
+
+        }
+    }
+
+
+    }
+
+    .text-box {
+        width: 820px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @media(max-width: 840px) {
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        h2 {
+            @include font(64px, 600, 96px, #FFFFFF);
+
+            @media (max-width: 930px) {
+                font-size: 48px;
+                line-height: 58px;
+            }
+
+        }
+
+        p {
+            @include font(64px, 500, 200%, #FFFFFF);
+            color: white;
+            font-size: 20px;
+
+            @media (max-width: 930px) {
+                font-size: 18px;
+            }
+        }
+    }
+}

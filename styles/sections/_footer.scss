@@ -1,0 +1,28 @@
+.footer {
+    padding: 50px 130px;
+
+    .space {
+        height: 500px;
+        background-image: url(../../assets/images/yer.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 100px;
+
+        @include flex($jc: center);
+        flex-direction: column;
+        text-align: center;
+
+        h2{
+            @include font(48px, 600, 72px, #ffffff);
+            margin-bottom: 40px;
+        } 
+    }
+
+        p{
+            color: rgba(0, 0, 0, 0.5);
+            margin-top: 120px;
+        }
+
+
+   
+}

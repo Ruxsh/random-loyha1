@@ -1,0 +1,45 @@
+.qoute {
+    padding: 150px 130px;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .card {
+
+        padding: 60px 40px;
+        text-align: center;
+        background-color: #FFFFFF;
+        border-radius: 50px;
+        position: relative;
+
+        .text {
+            @include font(20px, 500, 42px);
+        }
+
+        .author {
+            @include font(20px, 500, 42px, $primary);
+        }
+
+        .trello {
+            @include font(20px, 500, 42px, rgba(0, 0, 0, 0.5));
+        }
+
+        .avatar {
+            width: 200px;
+            height: 135px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 100%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+
+            img {
+                border-radius: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}

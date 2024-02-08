@@ -1,0 +1,106 @@
+.offers {
+
+    padding-bottom: 20%;
+
+    h2 {
+        @include font(48px, 600, 72px, black);
+        text-align: center;
+        margin-top: 160px;
+    }
+
+    .options {
+        width: 340px;
+        padding: 10px;
+        margin: 60px auto 48px auto;
+        background-color: white;
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+
+        span {
+            padding: 10px 24px;
+        }
+
+        span:first-child {
+            background-color: $primary;
+            color: white;
+            border-radius: 10px;
+        }
+    }
+
+    .cards-countainer {
+        @include flex($jc: center, $gap: 20px);
+        padding-bottom: 160px;
+
+        .card {
+            width: 380px;
+            background-color: white;
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+            border-radius: 50px;
+            padding: 25px;
+
+            img {
+                width: 280px;
+                height: 250px;
+                border-radius: 10%;
+            }
+
+            .imge-date {
+                @include flex($jc: space-between);
+
+                p {
+                    width: 0;
+                    height: 0;
+                    transform: rotate(90deg) translateX(-100px);
+                    white-space: nowrap;
+
+                    @include font(18px, 500, 27px, rgba(0, 0, 0, 0.5));
+                    letter-spacing: 0.5em;
+
+                }
+            }
+
+            .day-night {
+                padding: 20px;
+
+                span:first-child {
+                    @include font(14px, 500, 21px, $secondaryz);
+                    background-color: #fcdd;
+                    padding: 0 16px;
+                    border-radius: 100px;
+                }
+
+                span:last-child {
+                    @include font(14px, 400, 21px, rgba(0, 0, 0, 0.5));
+                }
+
+            }
+
+            .title {
+                padding: 0 20px;
+                @include font(24px, 600, 26px)
+            }
+
+            .footer {
+                padding: 10px 20px 0 20px;
+                @include flex($jc: space-between);
+
+                .price {
+                    @include font(24px, 500, 36px);
+
+                    span {
+                        @include font(18px, 500, 18px, rgba(0, 0, 0, 0.5));
+
+                    }
+                }
+
+                button {
+                    padding: 13px 19px;
+                    border: none;
+                    background-color: #F2FFF6;
+                    color: $primary;
+                    border-radius: 18px;
+                }
+            }
+        }
+    }
+}
